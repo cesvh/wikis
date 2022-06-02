@@ -1,0 +1,89 @@
+# https://brave.com/linux/#release-channel-installation
+cdev@cdev:~$ 
+cdev@cdev:~$ git --version
+
+Command 'git' not found, but can be installed with:
+
+sudo apt install git
+
+cdev@cdev:~$ 
+cdev@cdev:~$ add-apt-repository ppa:git-core/ppa
+Error: must run as root
+cdev@cdev:~$ 
+cdev@cdev:~$ sudo add-apt-repository ppa:git-core/ppa
+ The most current stable version of Git for Ubuntu.
+
+For release candidates, go to https://launchpad.net/~git-core/+archive/candidate .
+ More info: https://launchpad.net/~git-core/+archive/ubuntu/ppa
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://mirror.lstn.net/ubuntu focal InRelease
+Hit:2 http://mirror.lstn.net/ubuntu focal-updates InRelease                                     
+Hit:3 http://mirror.lstn.net/ubuntu focal-backports InRelease                                   
+Hit:4 http://mirror.lstn.net/ubuntu focal-security InRelease                                    
+Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease                                          
+Hit:6 https://brave-browser-apt-release.s3.brave.com stable InRelease                           
+Hit:7 http://archive.canonical.com/ubuntu focal InRelease                                       
+Get:8 http://ppa.launchpad.net/git-core/ppa/ubuntu focal InRelease [23.8 kB]
+Get:9 http://ppa.launchpad.net/git-core/ppa/ubuntu focal/main amd64 Packages [3 024 B]
+Get:10 http://ppa.launchpad.net/git-core/ppa/ubuntu focal/main i386 Packages [3 020 B]
+Get:11 http://ppa.launchpad.net/git-core/ppa/ubuntu focal/main Translation-en [2 252 B]
+Fetched 32.1 kB in 2s (18.7 kB/s)                     
+Reading package lists... Done
+cdev@cdev:~$ 
+cdev@cdev:~$ sudo apt update
+Hit:1 http://mirror.lstn.net/ubuntu focal InRelease
+Hit:2 http://mirror.lstn.net/ubuntu focal-updates InRelease                                     
+Hit:3 http://mirror.lstn.net/ubuntu focal-backports InRelease                                   
+Hit:4 http://mirror.lstn.net/ubuntu focal-security InRelease                                    
+Hit:5 http://archive.canonical.com/ubuntu focal InRelease                                       
+Hit:6 http://archive.ubuntu.com/ubuntu focal InRelease                                          
+Hit:7 https://brave-browser-apt-release.s3.brave.com stable InRelease
+Hit:8 http://ppa.launchpad.net/git-core/ppa/ubuntu focal InRelease  
+Reading package lists... Done                                       
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+cdev@cdev:~$ 
+cdev@cdev:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libfwupdplugin1
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs
+  git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7 852 kB of archives.
+After this operation, 41.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://mirror.lstn.net/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 http://ppa.launchpad.net/git-core/ppa/ubuntu focal/main amd64 git-man all 1:2.36.1-0ppa1~ubuntu20.04.1 [1 940 kB]
+Get:3 http://ppa.launchpad.net/git-core/ppa/ubuntu focal/main amd64 git amd64 1:2.36.1-0ppa1~ubuntu20.04.1 [5 886 kB]
+Fetched 7 852 kB in 16s (498 kB/s)                                                              
+Selecting previously unselected package liberror-perl.
+(Reading database ... 183377 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.36.1-0ppa1~ubuntu20.04.1_all.deb ...
+Unpacking git-man (1:2.36.1-0ppa1~ubuntu20.04.1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.36.1-0ppa1~ubuntu20.04.1_amd64.deb ...
+Unpacking git (1:2.36.1-0ppa1~ubuntu20.04.1) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.36.1-0ppa1~ubuntu20.04.1) ...
+Setting up git (1:2.36.1-0ppa1~ubuntu20.04.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+cdev@cdev:~$ 
+cdev@cdev:~$ git --version
+git version 2.36.1
+cdev@cdev:~$ 
+cdev@cdev:~$ 
+
