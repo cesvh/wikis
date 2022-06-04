@@ -1,0 +1,350 @@
+# Instalación de venv
+# sudo apt-get install python3-venv
+# python3 -m venv virtual-django-1
+# soruce virtual-django-1/bin/activate
+# deactivate
+# rm -r virtual-django-1
+# pip freeze > requirements.txt
+# pip install -r requirements.txt
+
+# Proceso de instalación de virtualenv
+
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ python3 --version
+Python 3.8.10
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ pip --version
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ pip freeze
+apturl==0.5.2
+bcrypt==3.1.7
+blinker==1.4
+Brlapi==0.7.0
+certifi==2019.11.28
+chardet==3.0.4
+Click==7.0
+colorama==0.4.3
+command-not-found==0.3
+cryptography==2.8
+cupshelpers==1.0
+dbus-python==1.2.16
+defer==1.0.6
+distro==1.4.0
+distro-info===0.23ubuntu1
+duplicity==0.8.12.0
+entrypoints==0.3
+fasteners==0.14.1
+future==0.18.2
+httplib2==0.14.0
+idna==2.8
+keyring==18.0.1
+language-selector==0.1
+launchpadlib==1.10.13
+lazr.restfulclient==0.14.2
+lazr.uri==1.0.3
+lockfile==0.12.2
+louis==3.12.0
+macaroonbakery==1.3.1
+Mako==1.1.0
+MarkupSafe==1.1.0
+monotonic==1.5
+netifaces==0.10.4
+oauthlib==3.1.0
+olefile==0.46
+paramiko==2.6.0
+pexpect==4.6.0
+Pillow==7.0.0
+protobuf==3.6.1
+pycairo==1.16.2
+pycups==1.9.73
+PyGObject==3.36.0
+PyJWT==1.7.1
+pymacaroons==0.13.0
+PyNaCl==1.3.0
+pyRFC3339==1.1
+python-apt==2.0.0+ubuntu0.20.4.7
+python-dateutil==2.7.3
+python-debian===0.1.36ubuntu1
+pytz==2019.3
+pyxdg==0.26
+PyYAML==5.3.1
+reportlab==3.5.34
+requests==2.22.0
+requests-unixsocket==0.2.0
+SecretStorage==2.3.1
+simplejson==3.16.0
+six==1.14.0
+systemd-python==234
+ubuntu-advantage-tools==27.8
+ubuntu-drivers-common==0.0.0
+ufw==0.36
+unattended-upgrades==0.1
+urllib3==1.25.8
+usb-creator==0.3.7
+wadllib==1.3.3
+xkit==0.0.0
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ pip freeze | grep env
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ python3 -m pip install virtualenv
+Collecting virtualenv
+  Downloading virtualenv-20.14.1-py2.py3-none-any.whl (8.8 MB)
+     |████████████████████████████████| 8.8 MB 2.6 MB/s 
+Collecting distlib<1,>=0.3.1
+  Downloading distlib-0.3.4-py2.py3-none-any.whl (461 kB)
+     |████████████████████████████████| 461 kB 2.3 MB/s 
+Collecting filelock<4,>=3.2
+  Downloading filelock-3.7.1-py3-none-any.whl (10 kB)
+Requirement already satisfied: six<2,>=1.9.0 in /usr/lib/python3/dist-packages (from virtualenv) (1.14.0)
+Collecting platformdirs<3,>=2
+  Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Installing collected packages: distlib, filelock, platformdirs, virtualenv
+  WARNING: The script virtualenv is installed in '/home/cdev/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed distlib-0.3.4 filelock-3.7.1 platformdirs-2.5.2 virtualenv-20.14.1
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ python3 -m virtualenv ve-django-curso-1
+created virtual environment CPython3.8.10.final.0-64 in 709ms
+  creator CPython3Posix(dest=/home/cdev/devs/git/python3/ve-django-curso-1, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/cdev/.local/share/virtualenv)
+    added seed packages: pip==22.0.4, setuptools==62.1.0, wheel==0.37.1
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ ls -la
+total 12
+drwxrwxr-x 3 cdev cdev 4096 jun  4 01:22 .
+drwxrwxr-x 4 cdev cdev 4096 jun  4 01:19 ..
+drwxrwxr-x 4 cdev cdev 4096 jun  4 01:22 ve-django-curso-1
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ ls -la ve-django-curso-1/
+total 24
+drwxrwxr-x 4 cdev cdev 4096 jun  4 01:22 .
+drwxrwxr-x 3 cdev cdev 4096 jun  4 01:22 ..
+drwxrwxr-x 2 cdev cdev 4096 jun  4 01:22 bin
+-rw-rw-r-- 1 cdev cdev   40 jun  4 01:22 .gitignore
+drwxrwxr-x 3 cdev cdev 4096 jun  4 01:22 lib
+-rw-rw-r-- 1 cdev cdev  203 jun  4 01:22 pyvenv.cfg
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ ls -la ve-django-curso-1/bin/
+total 68
+drwxrwxr-x 2 cdev cdev 4096 jun  4 01:22 .
+drwxrwxr-x 4 cdev cdev 4096 jun  4 01:22 ..
+-rw-rw-r-- 1 cdev cdev 2164 jun  4 01:22 activate
+-rw-rw-r-- 1 cdev cdev 1456 jun  4 01:22 activate.csh
+-rw-rw-r-- 1 cdev cdev 3041 jun  4 01:22 activate.fish
+-rw-rw-r-- 1 cdev cdev 2601 jun  4 01:22 activate.nu
+-rw-rw-r-- 1 cdev cdev 1754 jun  4 01:22 activate.ps1
+-rw-rw-r-- 1 cdev cdev 1199 jun  4 01:22 activate_this.py
+-rw-rw-r-- 1 cdev cdev  682 jun  4 01:22 deactivate.nu
+-rwxrwxr-x 1 cdev cdev  261 jun  4 01:22 pip
+-rwxrwxr-x 1 cdev cdev  261 jun  4 01:22 pip3
+-rwxrwxr-x 1 cdev cdev  261 jun  4 01:22 pip-3.8
+-rwxrwxr-x 1 cdev cdev  261 jun  4 01:22 pip3.8
+lrwxrwxrwx 1 cdev cdev   16 jun  4 01:22 python -> /usr/bin/python3
+lrwxrwxrwx 1 cdev cdev    6 jun  4 01:22 python3 -> python
+lrwxrwxrwx 1 cdev cdev    6 jun  4 01:22 python3.8 -> python
+-rwxrwxr-x 1 cdev cdev  248 jun  4 01:22 wheel
+-rwxrwxr-x 1 cdev cdev  248 jun  4 01:22 wheel3
+-rwxrwxr-x 1 cdev cdev  248 jun  4 01:22 wheel-3.8
+-rwxrwxr-x 1 cdev cdev  248 jun  4 01:22 wheel3.8
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ source ve-django-curso-1/bin/activate
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ python --version
+Python 3.8.10
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ pip --version
+pip 22.0.4 from /home/cdev/devs/git/python3/ve-django-curso-1/lib/python3.8/site-packages/pip (python 3.8)
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ pip list
+Package    Version
+---------- -------
+pip        22.0.4
+setuptools 62.1.0
+wheel      0.37.1
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the '/home/cdev/devs/git/python3/ve-django-curso-1/bin/python -m pip install --upgrade pip' command.
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ pip freeze
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ pip freeze
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ source ve-django-curso-1/bin/deactivate
+bash: ve-django-curso-1/bin/deactivate: No such file or directory
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ source ve-django-curso-1/bin/deactivate.nu 
+def-env: command not found
+
+Command 'def' not found, did you mean:
+
+  command 'den' from snap den (1.2.0-0)
+  command 'dex' from deb dex (0.8.0-2)
+  command 'dep' from deb go-dep (0.5.4-3)
+  command 'zef' from deb perl6-zef (0.8.2-1)
+  command 'df' from deb coreutils (8.30-3ubuntu2)
+
+See 'snap info <snapname>' for additional versions.
+
+bash: ve-django-curso-1/bin/deactivate.nu: line 3: syntax error near unexpected token `('
+bash: ve-django-curso-1/bin/deactivate.nu: line 3: `        $name in (env).name'
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ 
+(ve-django-curso-1) cdev@cdev:~/devs/git/python3$ deactivate
+cdev@cdev:~/devs/git/python3$ 
+cdev@cdev:~/devs/git/python3$ 
+
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+
