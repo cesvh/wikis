@@ -1,0 +1,179 @@
+cdev@cdev:~/devs/git$ 
+cdev@cdev:~/devs/git$ ls -l
+total 12
+drwxrwxr-x 2 cdev cdev 4096 jun 16 15:12 python
+drwxrwxr-x 3 cdev cdev 4096 jun  4 12:42 python3-test
+drwxrwxr-x 3 cdev cdev 4096 jun  4 12:43 wikis
+cdev@cdev:~/devs/git$ 
+cdev@cdev:~/devs/git$ mkdir virtualenv-projects
+cdev@cdev:~/devs/git$ 
+cdev@cdev:~/devs/git$ cd virtualenv-projects/
+cdev@cdev:~/devs/git/virtualenv-projects$ 
+cdev@cdev:~/devs/git/virtualenv-projects$ ls -l
+total 0
+cdev@cdev:~/devs/git/virtualenv-projects$ 
+cdev@cdev:~/devs/git/virtualenv-projects$ python3 -m virtualenv todo-crud
+created virtual environment CPython3.8.10.final.0-64 in 362ms
+  creator CPython3Posix(dest=/home/cdev/devs/git/virtualenv-projects/todo-crud, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/cdev/.local/share/virtualenv)
+    added seed packages: pip==22.1.2, setuptools==62.3.2, wheel==0.37.1
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+cdev@cdev:~/devs/git/virtualenv-projects$ 
+cdev@cdev:~/devs/git/virtualenv-projects$ ls -l
+total 4
+drwxrwxr-x 4 cdev cdev 4096 jun 16 16:39 todo-crud
+cdev@cdev:~/devs/git/virtualenv-projects$ 
+cdev@cdev:~/devs/git/virtualenv-projects$ source todo-crud/bin/activate
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ ls -l
+total 4
+drwxrwxr-x 4 cdev cdev 4096 jun 16 16:39 todo-crud
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ python --version
+Python 3.8.10
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ pip --version
+pip 22.1.2 from /home/cdev/devs/git/virtualenv-projects/todo-crud/lib/python3.8/site-packages/pip (python 3.8)
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ pip freeze
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ pip install django
+Collecting django
+  Using cached Django-4.0.5-py3-none-any.whl (8.0 MB)
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.2-py3-none-any.whl (42 kB)
+Collecting backports.zoneinfo
+  Using cached backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl (74 kB)
+Collecting asgiref<4,>=3.4.1
+  Using cached asgiref-3.5.2-py3-none-any.whl (22 kB)
+Installing collected packages: sqlparse, backports.zoneinfo, asgiref, django
+Successfully installed asgiref-3.5.2 backports.zoneinfo-0.2.1 django-4.0.5 sqlparse-0.4.2
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ pip freeze
+asgiref==3.5.2
+backports.zoneinfo==0.2.1
+Django==4.0.5
+sqlparse==0.4.2
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ 
+(todo-crud) cdev@cdev:~/devs/git/virtualenv-projects$ cd ..
+(todo-crud) cdev@cdev:~/devs/git$ 
+(todo-crud) cdev@cdev:~/devs/git$ ls -l
+total 16
+drwxrwxr-x 2 cdev cdev 4096 jun 16 15:12 python
+drwxrwxr-x 3 cdev cdev 4096 jun  4 12:42 python3-test
+drwxrwxr-x 3 cdev cdev 4096 jun 16 16:39 virtualenv-projects
+drwxrwxr-x 3 cdev cdev 4096 jun  4 12:43 wikis
+(todo-crud) cdev@cdev:~/devs/git$ 
+(todo-crud) cdev@cdev:~/devs/git$ cd python
+(todo-crud) cdev@cdev:~/devs/git/python$ 
+(todo-crud) cdev@cdev:~/devs/git/python$ ls -l
+total 0
+(todo-crud) cdev@cdev:~/devs/git/python$ 
+(todo-crud) cdev@cdev:~/devs/git/python$ django-admin startproject todo_crud
+(todo-crud) cdev@cdev:~/devs/git/python$ 
+(todo-crud) cdev@cdev:~/devs/git/python$ ls -l
+total 4
+drwxrwxr-x 3 cdev cdev 4096 jun 16 16:44 todo_crud
+(todo-crud) cdev@cdev:~/devs/git/python$ 
+(todo-crud) cdev@cdev:~/devs/git/python$ cd todo_crud/
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ ls -l
+total 8
+-rwxrwxr-x 1 cdev cdev  665 jun 16 16:44 manage.py
+drwxrwxr-x 2 cdev cdev 4096 jun 16 16:44 todo_crud
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py startapp todo
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ ls -l
+total 12
+-rwxrwxr-x 1 cdev cdev  665 jun 16 16:44 manage.py
+drwxrwxr-x 3 cdev cdev 4096 jun 16 16:47 todo
+drwxrwxr-x 3 cdev cdev 4096 jun 16 16:47 todo_crud
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ # Cada que se modifique el archivo models.py correr lo siguiente:
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py makemigrations
+Migrations for 'todo':
+  todo/migrations/0001_initial.py
+    - Create model Tarea
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, todo
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying todo.0001_initial... OK
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ # Cada que se modifique el archivo models.py correr lo siguiente:
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py makemigrations
+Migrations for 'todo':
+  todo/migrations/0001_initial.py
+    - Create model Tarea
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, todo
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying todo.0001_initial... OK
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py createsuperuser
+Username (leave blank to use 'cdev'): 
+Email address: 
+Password: 
+Password (again): 
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ 
+(todo-crud) cdev@cdev:~/devs/git/python/todo_crud$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2022 - 21:59:26
+Django version 4.0.5, using settings 'todo_crud.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+
